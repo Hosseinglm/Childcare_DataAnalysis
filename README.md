@@ -58,17 +58,9 @@ This repository contains insights and strategic recommendations derived from cus
 | Metric                  | Score/Range       | Insight                                                                 |
 |-------------------------|-------------------|-------------------------------------------------------------------------|
 | **NPS**                 | 8.5–9.0           | Exceptional loyalty; maintain excellence.                              |
-| **Ambience & Atmosphere** | -4.5            | Stable but room to enhance facility experience.                        |
-| **Curriculum & Activities** | -4.5         | Align offerings with high NPS standards.                               |
-| **Value for Money**      | -4.0–4.2          | Optimize service delivery and communication to bridge perception gaps. |
+| **Ambience & Atmosphere** | 4.5            | Stable but room to enhance facility experience.                        |
+| **Curriculum & Activities** | 4.5         | Align offerings with high NPS standards.                               |
+| **Value for Money**      | 4.04.2          | Optimize service delivery and communication to bridge perception gaps. |
 
 ---
 
-## Next Steps
-- Prioritize ambience upgrades and curriculum enhancements.  
-- Pilot redesigned feedback surveys by Q3.  
-- Track NPS and satisfaction metrics quarterly.  
-
-**Goal**: Sustain high loyalty while converting Passives/Detractors into Promoters.  
-
-For detailed data or collaboration, reach out to the project team.  
