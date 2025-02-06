@@ -98,12 +98,24 @@ def create_correlation_heatmap(df):
 
 def analyze_feedback_categories(df):
     """Analyze feedback categories and create bar chart."""
-    all_categories = []
-    df['NPS Feedback Categories'].fillna('').str.strip('"').apply(
-        lambda x: all_categories.extend([c.strip() for c in x.split(',') if c.strip()])
-    )
+    # all_categories = []
+    # df['NPS Feedback Categories'].fillna('').str.strip('"').apply(
+    #     lambda x: all_categories.extend([c.strip() for c in x.split(',') if c.strip()])
+    # )
+    #
+    # category_counts = pd.Series(all_categories).value_counts()
+    categories = []
+    for col in ['NPS Feedback Categories', 'Improvement Feedback Categories']:
+        df[col] = df[col].fillna('')  # Fill NaNs with empty string
+        categories.extend([
+            cat.strip('"') for row in df[col] if row
+            for cat in str(row).split(',') if cat.strip() and cat.lower() != 'nan'  # Remove empty and 'nan' strings
+        ])
 
-    category_counts = pd.Series(all_categories).value_counts()
+    category_counts = pd.Series(categories).value_counts()
+
+    # Remove 'nan' from the counts if it still exists
+    category_counts = category_counts[category_counts.index != 'nan']
 
     fig = px.bar(
         y=category_counts.values[:10],
